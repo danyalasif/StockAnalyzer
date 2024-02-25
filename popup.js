@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (data) {
         document.getElementById('eps-value').textContent = data.eps || 'N/A';
         document.getElementById('pe-ratio-value').textContent = data.peRatio || 'N/A';
+        document.getElementById('pb-ratio-value').textContent = data.pbRatio || 'N/A';
       } else {
         document.getElementById('data-display').textContent = 'Unable to fetch data.';
       }

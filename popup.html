@@ -4,12 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Analyzer Popup</title>
+    <style>
+        #data-display {
+            font-size: 18px;
+            font-weight: bold;
+            width: 500px;
+            height: 300px;
+            overflow-y: scroll;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        tr {
+            text-align: left;
+        }
+
+        table, tr, td, th {
+            
+            border: 1px solid brown;
+        }
+    </style>
 </head>
 <body>
     <h1>Data Analysis</h1>
     <div id="data-display">
-        <p>Earnings per Share (EPS): <span id="eps-value">Loading...</span></p>
-        <p>Price Earnings Ratio (PE Ratio): <span id="pe-ratio-value">Loading...</span></p>
+        <table>
+            <tr>
+                <th>Thing</th>
+                <th>Value</th>
+                <th>Desired Value</th>
+            </tr>
+            <tr>
+                <td>Earnings per Share</td>
+                <td id="eps-value">Loading...</td>
+                <td id="eps-desired-value"> > 4 </td>
+            </tr>
+            <tr>
+                <td>Price Earnings Ratio</td>
+                <td id="pe-ratio-value">Loading...</td>
+                <td id="pe-ratio-desired-value"> < 10 ></td>
+            </tr>
+            <tr>
+                <td>Price/Book Ratio</td>
+                <td id="pb-ratio-value">Loading...</td>
+                <td id="pb-ratio-desired-value"> < 1</td>
+            </tr>
+        </table>
     </div>
     <script src="popup.js"></script>
 </body>

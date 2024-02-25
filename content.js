@@ -12,7 +12,7 @@ function fetchDataFromPage() {
             const valueElement = thElements[i].nextElementSibling;
             if (valueElement) {
                 eps = parseFloat(valueElement.textContent.trim());
-                break; // Exit the loop once we find the value
+                continue; // Exit the loop once we find the value
             }
         }
 
@@ -21,7 +21,7 @@ function fetchDataFromPage() {
             const valueElement = thElements[i].nextElementSibling;
             if (valueElement) {
                 peRatio = parseFloat(valueElement.textContent.trim());
-                break; // Exit the loop once we find the value
+                continue; // Exit the loop once we find the value
             }
         }
 
@@ -29,24 +29,13 @@ function fetchDataFromPage() {
             // The next sibling element is the value we're interested in
             const valueElement = thElements[i].nextElementSibling;
             if (valueElement) {
-                eps = parseFloat(valueElement.textContent.trim());
-                break; // Exit the loop once we find the value
+                pbRatio = parseFloat(valueElement.textContent.trim());
+                continue; // Exit the loop once we find the value
             }
         }
-
-
     }
 
-
-
-    // Example of fetching data. Replace '.data-field' with actual selectors.
-    //const epsElement = document.querySelector('.eps-selector'); // Placeholder selector
-    const peRatioElement = document.querySelector('.pe-ratio-selector'); // Placeholder selector
-  
-    //const eps = epsElement ? parseFloat(epsElement.innerText) : null;
-    //const peRatio = peRatioElement ? parseFloat(peRatioElement.innerText) : null;
-  
-    return {eps, peRatio};
+    return {eps, peRatio, pbRatio};
   }
   
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {

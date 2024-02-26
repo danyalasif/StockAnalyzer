@@ -9,7 +9,8 @@ Scope & Features:
 [x] Show EPS (Earnings per share)
 [x] Show PE Ratio
 [x] Show PB Ratio
-[] Edit desired value and have color coding on it
+[x] Edit desired value and have color coding on it
+[] Stock price and Stock name
 [] Set "Should Buy" / "Shouldn't Buy" custom paramters
 [] Have a counter on the extension icon which shows how many checks it passes
 [] Show current stock price

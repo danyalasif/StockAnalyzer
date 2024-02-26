@@ -3,7 +3,7 @@
   "name": "Stock Analyzer",
   "version": "1.0",
   "description": "Analyze specific data fields on web pages.",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "storage"],
   "background": {
     "service_worker": "background.js"
   },
@@ -13,6 +13,7 @@
       "js": ["content.js"]
     }
   ],
+  "options_page": "settings.html",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {

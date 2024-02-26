@@ -10,7 +10,8 @@
   "content_scripts": [
     {
       "matches": ["https://sarmaaya.pk/psx/company/*"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_idle"
     }
   ],
   "options_page": "settings.html",

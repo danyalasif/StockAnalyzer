@@ -12,21 +12,22 @@
             height: 300px;
             overflow-y: scroll;
         }
+        table, tr, td, th {
+            border: 1px solid blanchedalmond;
+        }
 
         table {
             border-collapse: collapse;
             width: 100%;
         }
 
+        td {
+            font-size: 14px;
+        }
+
         tr {
             text-align: left;
         }
-
-        table, tr, td, th {
-            
-            border: 1px solid brown;
-        }
-
         #settings-btn {
             margin-bottom: 6px;
             padding: 3px;
@@ -37,13 +38,13 @@
 </head>
 <body>
     <h2>Data</h2>
-    <h3> <span id="stock-ticker"></span> : <span id="stock-name"></span> <span id="stock-price"></span></h3>
+    <h3> 🎫<span id="stock-ticker"></span> : <span id="stock-name"></span> 💰 Rs. <span id="stock-price"></span></h3>
     <button id="settings-btn">⚙️</button>
 
     <div id="data-display">
         <table>
             <tr>
-                <th>Thing</th>
+                <th>Fundamentals</th>
                 <th>Value</th>
                 <th>Desired Value</th>
             </tr>

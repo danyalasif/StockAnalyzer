@@ -3,6 +3,20 @@ function fetchDataFromPage() {
     let eps = null;
     let peRatio = null;
     let pbRatio = null;
+    let stockName = '';
+    let stockPrice = '';
+    let stockTicker = '';
+
+    const priceScript = document.querySelector("script[type='application/ld+json']");
+    const stockJson = JSON.parse(priceScript.textContent);
+
+    if (stockJson) {
+        stockName = stockJson.mentions[0].name;
+        stockPrice = stockJson.offers.price;
+        stockTicker = stockJson.mentions[0].tickerSymbol;
+        
+    }
+
     // Find all th elements and loop through them
     const thElements = document.querySelectorAll('tr th');
     for (let i = 0; i < thElements.length; i++) {
@@ -35,7 +49,7 @@ function fetchDataFromPage() {
         }
     }
 
-    return {eps, peRatio, pbRatio};
+    return {eps, peRatio, pbRatio, stockName, stockPrice, stockTicker};
   }
   
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
